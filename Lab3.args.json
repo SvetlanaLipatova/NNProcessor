@@ -1,0 +1,66 @@
+{
+  "FileVersion": 2,
+  "Id": "c765887c-b39c-890d-5c89-6f10489f050f",
+  "Items": [
+    {
+      "Id": "b90f4b7f-f8ff-4a7a-8284-0437a32b8c75",
+      "Command": "--max-tests 1000"
+    },
+    {
+      "Id": "576fbf01-86a2-46fd-921b-92214f4feed8",
+      "Command": "--cores 1"
+    },
+    {
+      "Id": "05371fef-db37-4e65-9cca-8e0386fcfc61",
+      "Command": "emnist",
+      "Items": [
+        {
+          "Id": "8e393f2a-3a8d-4cf1-be3b-0f6cec14e389",
+          "Command": "emnist"
+        },
+        {
+          "Id": "81ee035b-9bde-437b-aa7c-70aa43dbee98",
+          "Command": "--images \"$(SolutionDir)/datasets/emnist/emnist-digits-test-images-idx3-ubyte\""
+        },
+        {
+          "Id": "cf015b72-6e3c-4dee-a0fa-66c6339dff2e",
+          "Command": "--labels \"$(SolutionDir)/datasets/emnist/emnist-digits-test-labels-idx1-ubyte\""
+        },
+        {
+          "Id": "ffdc5c75-ac74-45b0-bb71-d5384e68e182",
+          "Command": "--model \"$(SolutionDir)/models/emnist/Model_1024_512_10_eps0.4_alpha0.4_batch1000.h5\""
+        },
+        {
+          "Id": "52f01f7e-b3b6-4488-9a90-936c15bcaa3c",
+          "Command": "--vcd \"$(SolutionDir)/test\""
+        },
+        {
+          "Id": "26c54d04-0c31-4fa8-ba7e-ded03e1be1ae",
+          "Command": "--results \"$(SolutionDir)/models/emnist/SimulationTests/Test__1024_512_10_eps0.4_alpha0.4_batch1000.txt\""
+        }
+      ]
+    },
+    {
+      "Id": "157cc6d1-3b48-4fed-81e9-302aba376642",
+      "Command": "figures",
+      "Items": [
+        {
+          "Id": "62cd2094-71a5-4293-a1c0-08193bd2efa2",
+          "Command": "figures"
+        },
+        {
+          "Id": "9ed2de06-c227-4422-9f0a-086cbee3c9aa",
+          "Command": "--info \"$(SolutionDir)/models/figures/Config.txt\""
+        },
+        {
+          "Id": "aa4c1394-ff0b-455e-8649-130135852970",
+          "Command": "--weights \"$(SolutionDir)/models/figures/Weights.txt\""
+        },
+        {
+          "Id": "36ce402a-67d3-44f7-a176-8385f6f96531",
+          "Command": "--dataset \"$(SolutionDir)/models/figures/Exaples.txt\""
+        }
+      ]
+    }
+  ]
+}
